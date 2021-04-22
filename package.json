@@ -1,0 +1,56 @@
+{
+  "name": "@devmobiliza/videojs-vimeo",
+  "version": "0.6.0",
+  "description": "Videojs Vimeo official plugin fork for working with video.js v7.6.6 onwards.",
+  "main": "dist/videojs-vimeo.cjs.js",
+  "module": "dist/videojs-vimeo.esm.js",
+  "browser": "dist/videojs-vimeo.umd.js",
+  "scripts": {
+    "build:lib": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [
+    "videojs",
+    "videojs-plugin",
+    "vimeo",
+    "mobiliza"
+  ],
+  "author": "Kevin Aguiar <kevin.aguiar@mobiliza.com.br>",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "index.html",
+    "src/"
+  ],
+  "dependencies": {
+    "@vimeo/player": "^2.10.0",
+    "video.js": "^7.6.6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-videojs": "^5.0.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "eslint-plugin-json-light": "^1.0.3",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "ghooks": "^2.0.4",
+    "rollup": "^1.32.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mobiliza/videojs-vimeo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobiliza/videojs-vimeo/issues"
+  },
+  "homepage": "https://github.com/Mobiliza/videojs-vimeo/#readme"
+}

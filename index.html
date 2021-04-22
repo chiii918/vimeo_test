@@ -4,21 +4,72 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>vimeo_test</title>
+
+  <!-- video.jsのcss読込 -->
+  <link href="./node_modules/video.js/dist/video-js.css" rel="stylesheet">
+
   <style>
-    body{
+    body,p,h1,h2{
       padding: 0;
       margin: 0;
+    }
+    
+    .video__wrap{
+      width: 40%;
+    }
+    .flex{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
+    .margin{
+      margin: 100px;
     }
   </style>
 </head>
 <body>
-  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/538971804" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; gyroscope; accelerometer" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- カードボードモード：2眼でのVR視聴モード -->
 
-  <br>
-  <br>
-  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/539020779" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- video.js読込確認 -->
+  <h1>video.jsを使用しての再生可能可否テスト</h1>
+  <video
+    id="vid1" class="video-js" width="640" height="400"
+    data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/539020779"}], "vimeo": { "color": "#fbc51b"} }'>
+  </video>
+  <div class="margin"></div>
 
-  
+  <!-- 購入/未購入表示テスト -->
+  <h1>購入/未購入表示テスト</h1>
+  <div class="flex">
+    <div class="video__wrap">
+      <h2>パブリック</h2>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/538971804" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; gyroscope; accelerometer" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video__wrap">
+      <h2>購入が必要な動画</h2>
+      <p>購入者（ログイン時）：フルで見える</p>
+      <p>購入者以外（ログアウト時）：サンプル動画のみ視聴可能、動画内に購入先に遷移できるボタンあり</p>
+      <p>サンプル動画のサイズが変なのはまことさんがサンプル動画として登録したもののサイズに合わせているため？</p>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/539020779" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="margin"></div>
+
+
+
+<!-- vimeo公式プレイヤーのplayer.js読込 -->
+<script src="https://player.vimeo.com/api/player.js"></script>
+<!-- video.js読込 -->
+<script src="./node_modules/video.js/dist/video.js"></script>
+<!-- video.jsのvimeoプラグイン読込 -->
+<script src="./dist/videojs-vimeo.umd.js"></script>
 </body>
 </html>
+
+
+
