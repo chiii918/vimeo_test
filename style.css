@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+body,p,h1,h2{
+  padding: 0;
+  margin: 0;
+}
+
+.video__wrap{
+  width: 40%;
+}
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.margin{
+  margin: 100px;
+}
+
+/* videoの枠組 */
+/* videoプレイヤー全体の大きさを設定 */
+/* bgc以外をいじるとおかしくなる */
+.c-video__wrapper{
+  position: relative;
+  width: 100%;
+  padding-top: 56.7%;
+  background-color: black;
+}
+/* プレイヤーの枠組みに対して動画そのものをフィットさせる */
+.c-video__wrapper .video-js{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+        
+        .c-video__wrapper [data-enable-devicemotion]{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+            appearance: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        .is-fullscreen{
+            z-index: 99999 !important;
+        }
+        .is-fullscreen .vjs-control-bar{
+            padding: 0 14px;
+            height: 5.5em;
+        }
+        .is-fullscreen .vjs-control-bar .vjs-control:before{
+            font-size: 24px;
+            line-height: 1.67;
+        }
+        .is-fullscreen .vjs-control-bar .vjs-volume-bar{
+            margin: 1.8em 0.45em
+        }
+        .is-fullscreen .vjs-control-bar .vjs-progress-control{
+            padding-bottom: 1.5em;
+        }
+        .is-fullscreen .vjs-control-bar .vjs-time-control{
+            line-height:4em;
+        }
