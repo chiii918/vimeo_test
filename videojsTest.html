@@ -17,7 +17,8 @@
     }
     
     .video__wrap{
-      width: 40%;
+      width: 50%;
+      margin-bottom: 5rem;
     }
     .flex{
       display: flex;
@@ -31,16 +32,22 @@
 </head>
 <body>
   <!-- video.js読込確認 -->
-  <h1>video.jsを使用しての再生可能可否テスト</h1>
+  <!-- <h1>video.jsを使用しての再生可能可否テスト</h1>
   <video
     id="vid1" class="video-js" width="640" height="400"
     data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/539020779"}], "vimeo": { "color": "#fbc51b"} }'>
   </video>
-  <div class="margin"></div>
+  <div class="margin"></div> -->
 
   <!-- 購入/未購入表示テスト -->
   <h1>購入/未購入表示テスト</h1>
-  <div class="flex">
+  <!-- <div class="flex"> -->
+    <div class="video__wrap">
+      <h2>購入動画テスト2</h2>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/547400739" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="video__wrap">
       <h2>パブリック</h2>
       <div style="padding:56.25% 0 0 0;position:relative;">
@@ -56,7 +63,7 @@
         <iframe src="https://player.vimeo.com/video/539020779" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
   <div class="margin"></div>
 
 
