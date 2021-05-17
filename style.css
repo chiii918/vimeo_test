@@ -56,7 +56,7 @@ body,p,h1,h2{
 .is-fullscreen{
   z-index: 99999 !important;
 }
-.is-fullscreen .vjs-control-bar{
+/* .is-fullscreen .vjs-control-bar{
   padding: 0 14px;
   height: 5.5em;
 }
@@ -72,4 +72,4 @@ body,p,h1,h2{
 }
 .is-fullscreen .vjs-control-bar .vjs-time-control{
   line-height:4em;
-}
+} */

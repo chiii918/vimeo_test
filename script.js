@@ -65,8 +65,8 @@ class Panorama {
 				initFov: 100,
 				// clickAndDragがtrueに設定されている場合、ビデオの回転は、ユーザーがビデオをドラッグアンドドロップしたときにのみ発生
 				clickAndDrag: true,
+				// モバイルでのジャイロ速度制御（デフォルト iOS:0.022 / Android:1）
 				mobileVibrationValue: 0.022,
-				// mobileVibrationValue: isIOS() ? 0.032:1.5,
 				// 通知メッセージのカスタマイズ（前半:スマホ、後半:PC）
 				NoticeMessage: (this.isMobile()) ? "please move your phone" : "please use your mouse drag and drop the video",
 				// パノラマビデオの準備ができたときにコールバック関数が起動
