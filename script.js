@@ -65,6 +65,7 @@ class Panorama {
 				initFov: 100,
 				// clickAndDragがtrueに設定されている場合、ビデオの回転は、ユーザーがビデオをドラッグアンドドロップしたときにのみ発生
 				clickAndDrag: true,
+				mobileVibrationValue: 0.5,
 				// 通知メッセージのカスタマイズ（前半:スマホ、後半:PC）
 				NoticeMessage: (this.isMobile()) ? "please move your phone" : "please use your mouse drag and drop the video",
 				// パノラマビデオの準備ができたときにコールバック関数が起動
