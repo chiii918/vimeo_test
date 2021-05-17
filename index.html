@@ -7,71 +7,52 @@
   <title>vimeo_test</title>
 
   <!-- video.js読込 -->
-  <script src="./dist/video.js/dist/video.js"></script>
-  <!-- video.jsのcss読込 -->
-  <link href="./dist/video.js/dist/video-js.css" rel="stylesheet">
-
-  <!-- three.jsの読込 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
-
+  <!-- <script src="./dist/video.js/dist/video.js"></script>
+  <link href="./dist/video.js/dist/video-js.css" rel="stylesheet"> -->
+  <!-- three.js(3Dライブラリ)の読込 -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script> -->
   <!-- panoramaの読込 -->
-  <link href="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.v5.min.js"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.v5.min.js"></script> -->
+
+<!-- video.js 5 -->
+<link href="http://vjs.zencdn.net/5.8/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/5.8/video.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
+<!-- Common -->
+<link href="//path/to/videojs-panorama.min.css" rel="stylesheet">
+<!-- video.js 5 -->
+<script src="//path/to/videojs-panorama.v5.min.js"></script>
 
 
-  <!-- video.jsのvimeoプラグイン読込 -->
-  <script src="./dist/videojs-vimeo.umd.js"></script>
 
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js"></script>
 </head>
 <body>
-  <a href="./videojsTest.html">ビデオテスト</a>
+  <a href="./videojsTest.html">vimeoテスト</a>
+  <a href="./test.html">panoramaテスト</a>
   <!-- カードボードモード：2眼でのVR視聴モード -->
-  <!-- panorama -->
   <h1>panoramaテスト</h1>
   <div class="margin"></div>
 
-  <h2>Panoramaなし</h2>
-  <video
-    class="video-js vjs-big-play-centered" width="640" height="400" data-player crossorigin="anonymous" controls
-    data-setup='{ "techOrder": ["html5", "vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/538971804"}] }'>
+  <h2>『never thought it would』Dance Base Yokohama（HD版）</h2>
+  <video id="player1" class="video-js vjs-big-play-centered" data-player crossorigin="anonymous" controls>
+    <source src="https://jcdn-movie.s3-ap-northeast-1.amazonaws.com/vr/daby-vr-hd-210308.mp4" type="video/mp4">
   </video>
-  
+  <button type="button" data-enable-devicemotion></button>
 
-  <div class="margin"></div>
-
-
-  <h2>Panoramaあり（vimeo）</h2>
-  <p>動画の音のみ再生される</p>
-  <div class="video__wrap">
-    <div class="c-video__wrapper" data-player-item>
-      <video
-        class="video-js vjs-big-play-centered" width="640" height="400" data-player crossorigin="anonymous" controls
-        data-setup='{ "techOrder": ["html5", "vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/538971804"}] }'>
-      </video>
-      <button type="button" data-enable-devicemotion></button>
-    </div>
-  </div>
-
-
-  <div class="margin"></div>
-
-
-  <h2>Panoramaあり（サーバー内動画）</h2>
-  <p>普通に再生（もともと音声なし）</p>
-  <div class="video__wrap">
-    <div class="c-video__wrapper" data-player-item>
-      <video class="video-js vjs-big-play-centered" data-player crossorigin="anonymous" controls>
-        <source src="./test_movie.mp4" type="video/mp4">
-      </video>
-      <button type="button" data-enable-devicemotion></button>
-    </div>
-  </div>
 
 <div class="margin"></div>
 
+  <h2>Panoramaあり（サーバー内動画）</h2>
+  <video class="video-js vjs-big-play-centered" data-player crossorigin="anonymous" controls>
+    <source src="./test_movie.mp4" type="video/mp4">
+  </video>
+  <button type="button" data-enable-devicemotion></button>
 
+
+<div class="margin"></div>
 
 <!-- 理想：動画の置き場所がvimeoで、再生などの動作はvideo.js諸々で制御
 現状：video.jsでvimeoの形式でそのまま読込

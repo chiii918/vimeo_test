@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vimeo_test</title>
+
+  <!-- video.js読込 -->
+  <script src="./dist/video.js/dist/video.js"></script>
+  <!-- video.jsのcss読込 -->
+  <link href="./dist/video.js/dist/video-js.css" rel="stylesheet">
+
+  <!-- three.jsの読込 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
+
+  <!-- panoramaの読込 -->
+  <link href="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/videojs-panorama@0.1.7/dist/videojs-panorama.v5.min.js"></script>
+
+
+  <!-- video.jsのvimeoプラグイン読込 -->
+  <script src="./dist/videojs-vimeo.umd.js"></script>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+  <a href="./videojsTest.html">ビデオテスト</a>
+  <!-- カードボードモード：2眼でのVR視聴モード -->
+  <!-- panorama -->
+  <h1>panoramaテスト</h1>
+  <div class="margin"></div>
+
+  <h2>Panoramaなし</h2>
+  <video
+    class="video-js vjs-big-play-centered" width="640" height="400" data-player crossorigin="anonymous" controls
+    data-setup='{ "techOrder": ["html5", "vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/538971804"}] }'>
+  </video>
+  
+
+  <div class="margin"></div>
+
+
+  <h2>Panoramaあり（vimeo）</h2>
+  <p>動画の音のみ再生される</p>
+  <div class="video__wrap">
+    <div class="c-video__wrapper" data-player-item>
+      <video
+        class="video-js vjs-big-play-centered" width="640" height="400" data-player crossorigin="anonymous" controls
+        data-setup='{ "techOrder": ["html5", "vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/538971804"}] }'>
+      </video>
+      <button type="button" data-enable-devicemotion></button>
+    </div>
+  </div>
+
+
+  <div class="margin"></div>
+
+
+  <h2>Panoramaあり（サーバー内動画）</h2>
+  <p>普通に再生（もともと音声なし）</p>
+  <div class="c-video__wrapper" data-player-item>
+    <video class="video-js vjs-big-play-centered" data-player crossorigin="anonymous" controls>
+      <source src="./test_movie.mp4" type="video/mp4">
+    </video>
+    <button type="button" data-enable-devicemotion></button>
+  </div>
+
+<div class="margin"></div>
+
+
+
+<!-- 理想：動画の置き場所がvimeoで、再生などの動作はvideo.js諸々で制御
+現状：video.jsでvimeoの形式でそのまま読込
+解決：vimeoの形式を外せないか確認 -->
+
+<!-- techOrder:  -->
+
+</body>
+</html>
+
+
+
